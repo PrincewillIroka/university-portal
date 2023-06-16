@@ -163,7 +163,7 @@
 .section-three {
   background-color: #f0efef;
   height: 400px;
-  padding: 20px 0 20px 10%;
+  padding: 2rem 0 2rem 10%;
   display: flex;
 }
 
@@ -218,11 +218,42 @@
   overflow-x: hidden;
 }
 
-.view-program-container {
-  height: 100%;
+.view-faculties-container {
   min-width: 300px;
   margin-right: 40px;
-  border: 1px solid #000;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 10px -4px 0px -13px rgba(0, 0, 0, 0.71);
+  -webkit-box-shadow: 10px -4px 0px -13px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 10px -4px 0px -13px rgba(0, 0, 0, 0.71);
+  position: relative;
+}
+
+.view-faculties-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.view-faculties-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 5px;
+}
+
+.faculty-title {
+  font-size: 18px;
+  margin-bottom: 1.3rem;
+  font-weight: 600;
+  color: #fff;
 }
 
 .section-four {

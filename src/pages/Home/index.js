@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import "./home.css";
@@ -8,9 +8,18 @@ import UniversityEntrance from "../../assets/UniversityEntrance.svg";
 function Home() {
   const moreProgramsRef = useRef();
 
-  const handleViewMorePrograms = () => {
-    console.log(moreProgramsRef);
-    const offset = moreProgramsRef.current.offsetLeft + 350;
+  const handleViewMoreFaculties = () => {
+    const { scrollLeft, offsetWidth, offsetLeft } = moreProgramsRef.current;
+
+    let offset = 0;
+    const currentScrollPosition = scrollLeft + offsetLeft;
+
+    if (currentScrollPosition >= offsetWidth) {
+      offset = -currentScrollPosition;
+    } else {
+      offset = scrollLeft + 320;
+    }
+
     moreProgramsRef.current.scroll({
       left: offset,
       behavior: "smooth",
@@ -84,31 +93,55 @@ function Home() {
           <div className="section-three-col-1">
             <h3 className="know-our-courses-heading">
               FIND OUT <br />
-              ABOUT OUR <br /> PROGRAMS
+              ABOUT OUR <br /> FACULTIES
             </h3>
             <h5 className="know-our-courses-info">
               A universe of opportunities.
             </h5>
             <div
               className="check-out-container"
-              onClick={handleViewMorePrograms}
+              onClick={handleViewMoreFaculties}
             >
               <span className="check-out-heading">View more</span>
               <BsArrowRight className="check-out-icon" />
             </div>
           </div>
           <div className="section-three-col-2" ref={moreProgramsRef}>
-            <div className="view-program-container">
-              <span>Content 1</span>
+            <div className="view-faculties-container">
+              <img
+                src="/images/chula-faculty-education-hero-desktop.jpeg"
+                alt="Education faculty"
+                className="view-faculties-img"
+              />
+              <div className="view-faculties-overlay">
+                <span className="faculty-title">Education</span>
+              </div>
             </div>
-            <div className="view-program-container">
-              <span>Content 2</span>
+            <div className="view-faculties-container">
+              <img
+                src="/images/sc-lab.jpeg"
+                alt=""
+                className="view-faculties-img"
+              />
+              <div className="view-faculties-overlay">
+                <span className="faculty-title">Science/Technology</span>
+              </div>
             </div>
-            <div className="view-program-container">
-              <span>Content 3</span>
+            <div className="view-faculties-container">
+              <img
+                src="/images/cee-pgt.jpeg"
+                alt=""
+                className="view-faculties-img"
+              />
+              <div className="view-faculties-overlay">
+                <span className="faculty-title">Engineering</span>
+              </div>
             </div>
-            <div className="view-program-container">
-              <span>Content 4</span>
+            <div className="view-faculties-container">
+              <img src="/images/arts-activities.jpeg" alt="" className="view-faculties-img" />
+              <div className="view-faculties-overlay">
+                <span className="faculty-title">Arts</span>
+              </div>
             </div>
           </div>
         </section>
