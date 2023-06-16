@@ -258,12 +258,130 @@
 
 .section-four {
   display: flex;
-  height: 50vh;
+  padding: 0.85rem 10%;
+}
+
+.what-students-say-col {
+  width: 70%;
+}
+
+.what-students-say-heading {
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 41px;
+}
+
+.receive-information-container {
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+
+.more-information-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.receive-information-content {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+}
+
+.receive-information-heading {
+  color: #fff;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+
+.receive-information-heading2 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.receive-information-form {
+  display: flex;
+  align-items: center;
+}
+
+.receive-information-input {
+  height: 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+  width: 200px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.receive-information-button {
+  background-color: #005b30;
+  color: #fff;
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.receive-information-button:hover {
+  opacity: 0.8;
 }
 
 .footer {
-  height: 538.65px;
+  display: flex;
+  flex-direction: column;
   background-color: #005b30;
-  padding: 7% 10% 2%;
+  padding: 2% 10% 1%;
   color: #fff;
+}
+
+.footer-row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 50px;
+}
+
+.social-media-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.social-media-icon-3 {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.footer-row-2 {
+  margin-bottom: 36px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-row-2-col {
+  width: 20%;
+  height: 100%;
+}
+
+.copyright-text {
+  text-align: center;
 }

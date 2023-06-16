@@ -1,9 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { BiSearch } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import "./home.css";
-import Logo from "../../assets/Logo.svg";
-import UniversityEntrance from "../../assets/UniversityEntrance.svg";
 
 function Home() {
   const moreProgramsRef = useRef();
@@ -29,7 +27,7 @@ function Home() {
   return (
     <div className="home-container">
       <header className="header">
-        <img src={Logo} className="logo" alt="Logo" />
+        <img src="/images/logo.svg" className="logo" alt="Logo" />
         <ul className="nav-container">
           <li className="nav-link">
             <a href="/home">Home</a>
@@ -76,7 +74,11 @@ function Home() {
         </section>
         <section className="section-two">
           <div className="section-two-img-container">
-            <img src={UniversityEntrance} alt="" className="section-two-img" />
+            <img
+              src="/images/university-entrance.svg"
+              alt=""
+              className="section-two-img"
+            />
           </div>
           <div className="section-two-right-container">
             <h3 className="welcome-heading">WELCOME TO OUR UNIVERSITY</h3>
@@ -120,7 +122,7 @@ function Home() {
             <div className="view-faculties-container">
               <img
                 src="/images/sc-lab.jpeg"
-                alt=""
+                alt="Science/Technology faculty"
                 className="view-faculties-img"
               />
               <div className="view-faculties-overlay">
@@ -130,7 +132,7 @@ function Home() {
             <div className="view-faculties-container">
               <img
                 src="/images/cee-pgt.jpeg"
-                alt=""
+                alt="Engineering faculty"
                 className="view-faculties-img"
               />
               <div className="view-faculties-overlay">
@@ -138,7 +140,11 @@ function Home() {
               </div>
             </div>
             <div className="view-faculties-container">
-              <img src="/images/arts-activities.jpeg" alt="" className="view-faculties-img" />
+              <img
+                src="/images/arts-activities.jpeg"
+                alt="Arts faculty"
+                className="view-faculties-img"
+              />
               <div className="view-faculties-overlay">
                 <span className="faculty-title">Arts</span>
               </div>
@@ -146,12 +152,74 @@ function Home() {
           </div>
         </section>
         <section className="section-four">
-          <div className="">
-            <h3>WHAT OUR STUDENTS SAY</h3>
+          <div className="what-students-say-col">
+            <h3 className="what-students-say-heading">WHAT OUR STUDENTS SAY</h3>
+            <div className="">
+              <div className="">
+                <img src="" alt="" className="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="" alt="" />
+          </div>
+        </section>
+        <section className="receive-information-container">
+          <img
+            src="/images/more-information.svg"
+            alt="More Information Image"
+            className="more-information-img"
+          />
+          <div className="receive-information-content">
+            <h3 className="receive-information-heading">
+              RECEIVE MORE <br /> INFORMATION
+            </h3>
+            <h5 className="receive-information-heading2">
+              Fill in the field below to receive
+              <br />
+              more information about your course.
+            </h5>
+            <div className="receive-information-form">
+              <input
+                placeholder="Your email address"
+                className="receive-information-input"
+              />
+              <button className="receive-information-button">
+                Receive information
+              </button>
+            </div>
           </div>
         </section>
         <footer className="footer">
-          <span>University Portal &copy; 2023</span>
+          <div className="footer-row-1">
+            <img src="/images/logo.svg" className="logo" alt="Logo" />
+            <div className="social-media-container">
+              <img
+                src="/images/social/instagram.svg"
+                alt=""
+                className="social-media-icon"
+              />
+              <img
+                src="/images/social/facebook.svg"
+                alt=""
+                className="social-media-icon"
+              />
+              <img
+                src="/images/social/twitter.svg"
+                alt=""
+                className="social-media-icon-3"
+              />
+            </div>
+          </div>
+          <div className="footer-row-2">
+            <div className="footer-row-2-col"></div>
+            <div className="footer-row-2-col"></div>
+            <div className="footer-row-2-col"></div>
+            <div className="footer-row-2-col"></div>
+          </div>
+          <span className="copyright-text">
+            University Portal &copy; {new Date().getFullYear()}
+          </span>
         </footer>
       </section>
     </div>
