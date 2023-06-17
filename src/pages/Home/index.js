@@ -198,7 +198,7 @@ function Home() {
               </div>
               <div className="entrepreneurship-container">
                 <h4 className="what-students-say-detailed-heading">
-                  Entrepreneurship in the university
+                  Entrepreneurial Studies
                 </h4>
                 <span className="what-students-say-detailed-info">
                   We have a great pedigree in teaching entrepreneurial studies

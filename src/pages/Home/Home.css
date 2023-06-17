@@ -113,6 +113,7 @@
 .welcome-description {
   color: #005b30;
   margin-bottom: 39px;
+  text-align: justify;
 }
 
 .welcome-btn {
@@ -362,6 +363,7 @@
 
 .what-students-say-detailed-info {
   font-size: 15px;
+  text-align: justify;
 }
 
 .entrepreneurship-container {
@@ -369,4 +371,5 @@
   flex-direction: column;
   width: 100%;
   height: 50%;
+  text-align: justify;
 }
