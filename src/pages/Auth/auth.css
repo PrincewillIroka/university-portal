@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   background-image: url("../../assets/program-bg.svg");
+  position: relative;
 }
 
 .auth-heading {
@@ -80,4 +81,14 @@
   margin-top: 40px;
   text-align: center;
   font-weight: 600;
+}
+
+.home-icon {
+  position: absolute;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
 }

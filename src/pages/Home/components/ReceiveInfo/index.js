@@ -1,4 +1,5 @@
 import React from "react";
+import "./receiveInfo.css";
 
 function ReceiveInfo() {
   return (

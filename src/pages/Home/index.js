@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./Home.css";
-import { Header, Footer } from "./components";
+import { Header, Footer, ReceiveInfo } from "./components";
 
 function Home() {
   const moreProgramsRef = useRef();
@@ -210,6 +210,7 @@ function Home() {
             </div>
           </div>
         </section>
+        <ReceiveInfo />
         <Footer />
       </div>
     </div>

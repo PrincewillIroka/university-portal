@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
 import "./auth.css";
 
 function Auth() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(location.pathname);
 
   const getActiveTab = (value) => activeTab.includes(value);
+
+  function handleClick() {
+    navigate("/", { replace: true });
+  }
 
   return (
     <div className="auth-container">
@@ -50,6 +56,7 @@ function Auth() {
           </button>
         </div>
       </div>
+      <AiFillHome className="home-icon" onClick={handleClick} />
     </div>
   );
 }
