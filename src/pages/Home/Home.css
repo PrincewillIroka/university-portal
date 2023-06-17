@@ -177,7 +177,7 @@
 .section-three-col-2 {
   display: flex;
   width: 70%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .view-faculties-container {
