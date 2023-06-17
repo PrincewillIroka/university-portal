@@ -1,10 +1,26 @@
-import React, { useRef } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import React, { useRef, useState } from "react";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./home.css";
 import { Header, Footer } from "./components";
 
 function Home() {
   const moreProgramsRef = useRef();
+  const [whatOurStudentsSay, setWhatOurStudentsSay] = useState([
+    {
+      name: "JOSÉ LUIZ",
+      graduated: "GRADUATED IN ENGINEERING AT OUR UNIVERSITY",
+      description:
+        "From my course, I gained relevant industry specific experience.",
+      img: "close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray.jpg",
+    },
+    {
+      name: "JANE READS",
+      graduated: "GRADUATED IN OPTOMETRY AT OUR UNIVERSITY",
+      description:
+        "Today, I'm a medical practitioner thanks to the university.",
+      img: "close-up-young-attractive-charismatic-woman-isolated.jpg",
+    },
+  ]);
 
   const handleViewMoreFaculties = () => {
     const { scrollLeft, offsetWidth, offsetLeft } = moreProgramsRef.current;
@@ -135,16 +151,63 @@ function Home() {
           </div>
         </section>
         <section className="section-four">
-          <div className="what-students-say-col">
+          <div className="what-students-say-col-1">
             <h3 className="what-students-say-heading">WHAT OUR STUDENTS SAY</h3>
-            <div className="">
-              <div className="">
-                <img src="" alt="" className="" />
+            {whatOurStudentsSay.slice(0, 1).map((obj) => (
+              <div className="what-students-say-content">
+                <div className="what-students-say-content-row">
+                  <img
+                    src={`/images/what-our-students-say/${obj.img}`}
+                    alt="Student"
+                    className="what-students-say-photo"
+                  />
+                  <div className="what-students-say-profile">
+                    <span className="what-students-say-name">{obj.name}</span>
+                    <span className="what-students-say-graduated">
+                      {obj.graduated}
+                    </span>
+                  </div>
+                </div>
+                <span className="what-students-say-description">
+                  {obj.description}
+                </span>
               </div>
+            ))}
+            <div className="what-students-say-nav-row">
+              <BsArrowLeft className="what-students-say-arrows" />
+              <BsArrowRight className="what-students-say-arrows what-students-say-arrows-is-allowed" />
             </div>
           </div>
-          <div>
-            <img src="" alt="" />
+          <div className="what-students-say-col-2">
+            <img
+              src="/images/what-our-students-say/medium-shot-student-holding-books.jpg"
+              alt="Student"
+              className="what-students-say-hero-img1"
+            />
+            <div className="what-students-say-detailed-col">
+              <div className="where-our-students-work-container">
+                <h4 className="what-students-say-detailed-heading">
+                  Where our students work
+                </h4>
+                <span className="what-students-say-detailed-info">
+                  Our students work in the best institutions all over the world.
+                  Top global firms like JP Morgan, Google, KPMG, Facebook,
+                  Apple, Tesla, Arlbemade e.t.c have alumni who finished from
+                  our university.
+                </span>
+              </div>
+              <div className="entrepreneurship-container">
+                <h4 className="what-students-say-detailed-heading">
+                  Entrepreneurship in the university
+                </h4>
+                <span className="what-students-say-detailed-info">
+                  We have a great pedigree in teaching entrepreneurial studies
+                  to students in our institution. From the first semester up
+                  till the last, we inculcate valuable tutorials to enable them
+                  thrive in starting businesses after they graduate.
+                </span>
+              </div>
+            </div>
           </div>
         </section>
         <section className="receive-information-container">

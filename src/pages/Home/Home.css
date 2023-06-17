@@ -220,17 +220,150 @@
 
 .section-four {
   display: flex;
-  padding: 0.85rem 10%;
+  padding: 3rem 10%;
 }
 
-.what-students-say-col {
-  width: 70%;
+.what-students-say-col-1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
 }
 
 .what-students-say-heading {
   font-weight: 600;
   font-size: 23px;
-  margin-bottom: 41px;
+  margin-bottom: 30px;
+}
+
+.what-students-say-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  width: 100%;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    display: none;
+  }
+  to {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.what-students-say-content-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.what-students-say-photo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.what-students-say-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.what-students-say-name {
+  font-weight: 600;
+  color: #005b30;
+  text-transform: uppercase;
+}
+
+.what-students-say-graduated {
+  font-weight: 400;
+  font-size: 12px;
+  color: #005b30;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.what-students-say-description {
+  font-weight: 400;
+  color: #005b30;
+}
+
+.what-students-say-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+}
+
+.what-students-say-arrows {
+  color: #005b30;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.what-students-say-arrows-is-allowed {
+  color: #fff;
+  background-color: #005b30;
+  border-radius: 50%;
+}
+
+.what-students-say-col-2 {
+  height: 60vh;
+  width: 50%;
+  display: flex;
+}
+
+.what-students-say-hero-img1 {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.what-students-say-detailed-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+
+.where-our-students-work-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+}
+
+.what-students-say-detailed-heading {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #01963d;
+}
+
+.what-students-say-detailed-info {
+  font-size: 15px;
+}
+
+.entrepreneurship-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
 }
 
 .receive-information-container {
@@ -259,14 +392,14 @@
 .receive-information-heading {
   color: #fff;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 22px;
 }
 
 .receive-information-heading2 {
   color: #fff;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .receive-information-form {
@@ -275,22 +408,22 @@
 }
 
 .receive-information-input {
-  height: 35px;
+  height: 40px;
   background-color: #fff;
   border-radius: 5px;
   padding: 0 10px;
-  width: 200px;
-  font-size: 14px;
+  width: 250px;
+  font-size: 16px;
   margin-right: 10px;
 }
 
 .receive-information-button {
   background-color: #005b30;
   color: #fff;
-  height: 35px;
+  height: 40px;
   padding: 0 10px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
