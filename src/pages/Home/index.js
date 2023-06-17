@@ -5,7 +5,7 @@ import { Header, Footer } from "./components";
 
 function Home() {
   const moreProgramsRef = useRef();
-  const [whatOurStudentsSay, setWhatOurStudentsSay] = useState([
+  const [whatOurStudentsSay] = useState([
     {
       name: "JOSÉ LUIZ",
       graduated: "GRADUATED IN ENGINEERING AT OUR UNIVERSITY",
