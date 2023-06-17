@@ -6,6 +6,7 @@
   background-image: url("../../assets/program-bg.svg");
   height: 85vh;
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .programs-top-section-content {
@@ -14,10 +15,9 @@
   display: flex;
   justify-content: center;
   padding-top: 20%;
-  /* align-items: center; */
 }
 
-.programs-us-info {
+.programs-best-for-you-text {
   font-size: 50px;
   font-weight: 600;
   color: #fff;
@@ -25,4 +25,12 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   height: 10rem;
+}
+
+.discover-courses-heading {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #005b30;
 }

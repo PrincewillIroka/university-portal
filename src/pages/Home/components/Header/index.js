@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import "./header.css";
 
 function Header() {
+  const navigate = useNavigate(); 
+
+  function handleClick() {
+    navigate("/login");
+  }
+
   return (
     <header className="header">
       <img src="/images/logo.svg" className="logo" alt="Logo" />
@@ -22,7 +29,9 @@ function Header() {
       </ul>
       <div className="nav-action-container">
         <BiSearch className="search-icon" />
-        <button className="login-btn">Login</button>
+        <button className="login-btn" onClick={handleClick}>
+          Login
+        </button>
       </div>
     </header>
   );
