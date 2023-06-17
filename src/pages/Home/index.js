@@ -153,8 +153,8 @@ function Home() {
         <section className="section-four">
           <div className="what-students-say-col-1">
             <h3 className="what-students-say-heading">WHAT OUR STUDENTS SAY</h3>
-            {whatOurStudentsSay.slice(0, 1).map((obj) => (
-              <div className="what-students-say-content">
+            {whatOurStudentsSay.slice(0, 1).map((obj, index) => (
+              <div className="what-students-say-content" key={index}>
                 <div className="what-students-say-content-row">
                   <img
                     src={`/images/what-our-students-say/${obj.img}`}
