@@ -23,9 +23,7 @@ function ReceiveInfo() {
             placeholder="Your email address"
             className="receive-information-input"
           />
-          <button className="receive-information-button">
-            Receive information
-          </button>
+          <button className="receive-information-button">Submit</button>
         </div>
       </div>
     </section>

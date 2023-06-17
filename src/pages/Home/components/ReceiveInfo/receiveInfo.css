@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  width: 40%;
+  width: 50%;
 }
 
 .receive-information-heading {
@@ -44,7 +44,7 @@
   background-color: #fff;
   border-radius: 5px;
   padding: 0 10px;
-  width: 250px;
+  width: 20vw;
   font-size: 16px;
   margin-right: 10px;
 }
@@ -53,7 +53,7 @@
   background-color: #005b30;
   color: #fff;
   height: 40px;
-  padding: 0 10px;
+  padding: 0 15px;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
