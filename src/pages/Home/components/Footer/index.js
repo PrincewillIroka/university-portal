@@ -25,10 +25,30 @@ function Footer() {
         </div>
       </div>
       <div className="footer-row-2">
-        <div className="footer-row-2-col"></div>
-        <div className="footer-row-2-col"></div>
-        <div className="footer-row-2-col"></div>
-        <div className="footer-row-2-col"></div>
+        <div className="footer-row-2-col">
+          <h4>Campus One</h4>
+          <span>campus@university.com</span>
+          <span>(41) 23456789</span>
+          <address>123 New Drive Layout, Good Road, One Province</address>
+        </div>
+        <div className="footer-row-2-col">
+          <h4>Campus Two</h4>
+          <span>campus@university.com</span>
+          <span>(41) 23456789</span>
+          <address>123 New Drive Layout, Good Road, One Province</address>
+        </div>
+        <div className="footer-row-2-col">
+          <h4>Campus Three</h4>
+          <span>campus@university.com</span>
+          <span>(41) 23456789</span>
+          <address>123 New Drive Layout, Good Road, One Province</address>
+        </div>
+        <div className="footer-row-2-col">
+          <h4>Campus Four</h4>
+          <span>campus@university.com</span>
+          <span>(41) 23456789</span>
+          <address>123 New Drive Layout, Good Road, One Province</address>
+        </div>
       </div>
       <span className="copyright-text">
         University Portal &copy; {new Date().getFullYear()}
