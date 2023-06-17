@@ -1,0 +1,28 @@
+.programs-container {
+  position: relative;
+}
+
+.programs-top-section {
+  background-image: url("../../assets/program-bg.svg");
+  height: 85vh;
+  width: 100%;
+}
+
+.programs-top-section-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+  /* align-items: center; */
+}
+
+.programs-us-info {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 40%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10rem;
+}
