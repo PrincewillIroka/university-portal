@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import "./home.css";
+import "./Home.css";
 import { Header, Footer } from "./components";
 
 function Home() {
