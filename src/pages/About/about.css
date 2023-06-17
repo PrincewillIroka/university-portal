@@ -14,7 +14,6 @@
   display: flex;
   justify-content: center;
   padding-top: 20%;
-  /* align-items: center; */
 }
 
 .about-us-info {
@@ -25,4 +24,33 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   height: 10rem;
+}
+
+.about-section-two {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 10%;
+}
+
+.about-section-two-row-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-section-two-rendition {
+  width: 50%;
+  color: #005b30;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.about-section-two-rendition-2 {
+  font-size: 20px;
+  font-weight: 600;
+  font-weight: 700;
+  font-size: 24px;
+  color: #01963d;
+  width: 50%;
+  margin-top: 30px;
 }
