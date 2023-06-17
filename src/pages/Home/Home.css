@@ -2,51 +2,13 @@
   position: relative;
 }
 
-.header {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  padding: 20px 10%;
-  width: 80%;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 80px;
-  width: 100px;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.nav-link {
-  color: #fff;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.nav-link:not(:nth-child(4)) {
-  margin-right: 60px;
-}
-
-.search-icon {
-  height: 40px;
-  width: 40px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.top-section {
-  background-image: url("../../assets/TopSection.svg");
+.home-top-section {
+  background-image: url("../../assets/home-bg.svg");
   height: 85vh;
   width: 100%;
 }
 
-.top-section-content {
+.home-top-section-content {
   width: 100%;
   padding-top: 17%;
   display: flex;

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { BiSearch } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import "./home.css";
+import { Header } from "./components";
 
 function Home() {
   const moreProgramsRef = useRef();
@@ -26,27 +26,10 @@ function Home() {
 
   return (
     <div className="home-container">
-      <header className="header">
-        <img src="/images/logo.svg" className="logo" alt="Logo" />
-        <ul className="nav-container">
-          <li className="nav-link">
-            <a href="/home">Home</a>
-          </li>
-          <li className="nav-link">
-            <a href="/about">About</a>
-          </li>
-          <li className="nav-link">
-            <a href="/programs">Programs</a>
-          </li>
-          <li className="nav-link">
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-        <BiSearch className="search-icon" />
-      </header>
-      <section>
-        <section className="top-section">
-          <div className="top-section-content">
+      <Header />
+      <div>
+        <section className="home-top-section">
+          <div className="home-top-section-content">
             <div className="university-title">
               <span>University</span>
               <span>Portal</span>
@@ -167,7 +150,7 @@ function Home() {
         <section className="receive-information-container">
           <img
             src="/images/more-information.svg"
-            alt="More Information Image"
+            alt="More Information"
             className="more-information-img"
           />
           <div className="receive-information-content">
@@ -221,7 +204,7 @@ function Home() {
             University Portal &copy; {new Date().getFullYear()}
           </span>
         </footer>
-      </section>
+      </div>
     </div>
   );
 }
