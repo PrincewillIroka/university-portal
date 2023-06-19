@@ -7,12 +7,21 @@ function Auth() {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(location.pathname);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const getActiveTab = (value) => activeTab.includes(value);
 
-  function handleClick() {
+  const handleClick = () => {
     navigate("/", { replace: true });
-  }
+  };
+
+  const handleSetActiveTab = (route) => {
+    setActiveTab(route);
+    navigate(`/${route}`);
+  };
+
+  const handleSubmit = () => {};
 
   return (
     <div className="auth-container">
@@ -23,7 +32,7 @@ function Auth() {
             className={`auth-header-text ${
               getActiveTab("login") && "auth-header-text-active"
             }`}
-            onClick={() => setActiveTab("login")}
+            onClick={() => handleSetActiveTab("login")}
           >
             Login
           </span>
@@ -31,7 +40,7 @@ function Auth() {
             className={`auth-header-text ${
               getActiveTab("signup") && "auth-header-text-active"
             }`}
-            onClick={() => setActiveTab("signup")}
+            onClick={() => handleSetActiveTab("signup")}
           >
             Sign Up
           </span>
@@ -39,19 +48,29 @@ function Auth() {
         <div className="auth-body">
           {getActiveTab("login") ? (
             <div className="login-container">
-              <input className="auth-input" placeholder="Enter username" />
+              <input
+                className="auth-input"
+                placeholder="Enter username"
+                value={username}
+              />
             </div>
           ) : (
             <div className="signup-container">
-              <input className="auth-input" placeholder="Enter username" />
+              <input
+                className="auth-input"
+                placeholder="Enter username"
+                value={password}
+                onChange={(e) => setUsername(e.target.value)}
+              />
               <input
                 className="auth-input"
                 placeholder="Enter password"
                 type="password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           )}
-          <button className="submit-btn">
+          <button className="submit-btn" onClick={handleSubmit}>
             {getActiveTab("login") ? "Login" : "Sign Up"}
           </button>
         </div>
