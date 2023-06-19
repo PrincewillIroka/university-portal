@@ -210,3 +210,45 @@
 .staff-img-align-right {
   right: 0;
 }
+
+.about-section-five {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 20%;
+  background-color: #eee;
+}
+
+.faq-heading {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.faq-single {
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
+  font-size: 18px;
+}
+
+.faq-plus-icon {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.faq-answer-active {
+  display: flex;
+  margin-bottom: 10px;
+}
