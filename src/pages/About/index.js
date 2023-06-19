@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import { Header } from "../Home/components";
+import { Header, Footer, ReceiveInfo } from "../Home/components";
 
 function About() {
   return (
@@ -45,6 +45,35 @@ function About() {
           career!
         </div>
       </section>
+      <section className="about-section-three">
+        <img
+          src="/images/about/vc.svg"
+          className="vc-img"
+          alt="Vice Chancellor"
+        />
+        <div className="vc-details-container">
+          <span className="vc-name">Carolina Silva</span>
+          <span className="vc-title">Vice Chancellor</span>
+          <span className="vc-speech">
+            The core values have projected the image of this institution as a
+            centre for learning and character moulding of our students. The core
+            values also depict the vision of our University which is to nurture
+            a University of high international standard so that the quality of
+            the institution is rated the best in the world.
+          </span>
+          <span className="vc-speech">
+            Our policies are geared towards instituting e-learning and
+            governance in administration. Efforts are being made towards human
+            capital development for effectiveness and efficiency in our service
+            delivery. I therefore implore all students to ensure that they avail
+            themselves and make the best use of the facilities provided by the
+            University to acquire these skills and competences before
+            graduation.
+          </span>
+        </div>
+      </section>
+      <ReceiveInfo />
+      <Footer />
     </div>
   );
 }
