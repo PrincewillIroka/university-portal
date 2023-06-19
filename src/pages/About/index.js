@@ -72,6 +72,82 @@ function About() {
           </span>
         </div>
       </section>
+      <section className="about-section-four">
+        <div className="about-section-four-content">
+          <div className="staff-container">
+            <img
+              src="/images/about/staff-1.svg"
+              className="staff-img staff-img-align-left"
+            />
+            <div className="staff-details-container staff-details-container-left staff-details-container-1">
+              <div className="staff-details-wrapper">
+                <div className="staff-details-content staff-details-content-left staff-details-content-color-1">
+                  <span className="staff-name">Juliano Pereria</span>
+                  <span className="staff-title">Professor</span>
+                  <span className="staff-info">
+                    We do our best to ensure that students are taught with
+                    utmost care.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="staff-container">
+            <div className="staff-details-container staff-details-container-right staff-details-container-2">
+              <div className="staff-details-wrapper">
+                <div className="staff-details-content staff-details-content-right staff-details-content-color-2">
+                  <span className="staff-name">Eduarda Rocha</span>
+                  <span className="staff-title">Professor</span>
+                  <span className="staff-info">
+                    We do our best to ensure that students are taught with
+                    utmost care.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/images/about/staff-2.svg"
+              className="staff-img staff-img-align-right"
+            />
+          </div>
+          <div className="staff-container">
+            <img
+              src="/images/about/staff-3.svg"
+              className="staff-img staff-img-align-left"
+            />
+            <div className="staff-details-container staff-details-container-left staff-details-container-2">
+              <div className="staff-details-wrapper">
+                <div className="staff-details-content staff-details-content-left staff-details-content-color-2">
+                  <span className="staff-name">Rafael Almeida</span>
+                  <span className="staff-title">Assistant Professor</span>
+                  <span className="staff-info">
+                    We do our best to ensure that students are taught with
+                    utmost care.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="staff-container">
+            <div className="staff-details-container staff-details-container-right staff-details-container-1">
+              <div className="staff-details-wrapper">
+                <div className="staff-details-content staff-details-content-right staff-details-content-color-1">
+                  <span className="staff-name">Fabiana Melo</span>
+                  <span className="staff-title">Assistant Professor</span>
+                  <span className="staff-info">
+                    We do our best to ensure that students are taught with
+                    utmost care.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/images/about/staff-4.svg"
+              className="staff-img staff-img-align-right"
+            />
+          </div>
+        </div>
+      </section>
       <ReceiveInfo />
       <Footer />
     </div>
