@@ -1,0 +1,95 @@
+.contact-container {
+  position: relative;
+}
+
+.contact-top-section {
+  background-image: url("../../assets/program-bg.svg");
+  height: 85vh;
+  width: 100%;
+}
+
+.contact-top-section-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+}
+
+.contact-best-for-you-text {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 40%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10rem;
+}
+
+.contact-section-two {
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-heading {
+  color: #01963d;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-section-two-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-col-1 {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+}
+
+.contact-input-field {
+  height: 30px;
+  border-radius: 1px solid #ccc;
+  padding: 0 5px;
+  margin-bottom: 25px;
+  font-size: 17px;
+  width: calc(100% - 10px);
+}
+
+.contact-textarea {
+  height: 150px;
+  width: calc(100% - 10px);
+  resize: none;
+  margin-bottom: 30px;
+  padding: 5px;
+}
+
+.contact-btn {
+  background-color: #01963d;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-btn:hover {
+  opacity: 0.7;
+}
+
+.contact-col-2 {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.contact-map {
+  flex: 1;
+  border: 1px solid #eee;
+}
