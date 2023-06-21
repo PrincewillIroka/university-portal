@@ -4,13 +4,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { RiLoginCircleLine } from "react-icons/ri";
 import "./header.css";
-import { useWindowDimensions } from "../../../../hooks";
 import { useStateValue } from "../../../../store";
 
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { pageWidth } = useWindowDimensions();
   const { state, dispatch } = useStateValue();
   const { isHeaderModalVisible = false } = state || {};
   const { pathname = "" } = location;
@@ -18,8 +16,6 @@ function Header() {
   const getActiveTab = (value) => {
     return pathname.includes(value);
   };
-
-  const checkScreenSize = (width) => pageWidth > width;
 
   const handleClick = () => {
     navigate("/login");
@@ -37,12 +33,10 @@ function Header() {
       />
       <img src="/images/logo.svg" className="logo" alt="Logo" />
       <ul
-        className={`${
-          checkScreenSize(1020)
-            ? "nav-links-container"
-            : !checkScreenSize(1020) && isHeaderModalVisible
-            ? "nav-links-container-sm"
-            : "nav-links-container-hidden"
+        className={`nav-links-container ${
+          !isHeaderModalVisible
+            ? "nav-links-container-hidden"
+            : "nav-links-container-sm"
         }`}
       >
         <li
