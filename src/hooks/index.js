@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export function useWindowDimensions() {
   const [pageWidth, setPageWidth] = useState(window.innerWidth);
+  const [pageHeight, setPageHeight] = useState(window.innerHeight);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -10,9 +11,10 @@ export function useWindowDimensions() {
     };
   }, []);
 
-  function handleResize({ currentTarget: { innerWidth } }) {
+  function handleResize({ currentTarget: { innerWidth, innerHeight } }) {
     setPageWidth(innerWidth);
+    setPageHeight(innerHeight);
   }
 
-  return { pageWidth };
+  return { pageWidth, pageHeight };
 }
