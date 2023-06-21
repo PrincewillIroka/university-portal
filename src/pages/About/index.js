@@ -93,6 +93,7 @@ function About() {
             <img
               src="/images/about/staff-1.svg"
               className="staff-img staff-img-align-left"
+              alt="Staff"
             />
             <div className="staff-details-container staff-details-container-left staff-details-container-1">
               <div className="staff-details-wrapper">
@@ -123,12 +124,14 @@ function About() {
             <img
               src="/images/about/staff-2.svg"
               className="staff-img staff-img-align-right"
+              alt="Staff"
             />
           </div>
           <div className="staff-container">
             <img
               src="/images/about/staff-3.svg"
               className="staff-img staff-img-align-left"
+              alt="Staff"
             />
             <div className="staff-details-container staff-details-container-left staff-details-container-2">
               <div className="staff-details-wrapper">
@@ -159,6 +162,7 @@ function About() {
             <img
               src="/images/about/staff-4.svg"
               className="staff-img staff-img-align-right"
+              alt="Staff"
             />
           </div>
         </div>
