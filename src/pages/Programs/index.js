@@ -1,10 +1,18 @@
 import "./programs.css";
 import { Header, Footer, ReceiveInfo } from "../Home/components";
 import { PROGRAMS } from "../../data";
+import { useStateValue } from "../../store";
 
 function Programs() {
+  const { state } = useStateValue();
+  const { isHeaderModalVisible = false } = state || {};
+
   return (
-    <div className="programs-container">
+    <div
+      className={`programs-container container-scroll-enabled ${
+        isHeaderModalVisible && "container-scroll-disabled"
+      }`}
+    >
       <Header />
       <section className="programs-top-section">
         <div className="programs-top-section-content">

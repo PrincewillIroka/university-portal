@@ -1,9 +1,11 @@
 body {
   font-family: "Saira", cursive;
+  overflow-y: hidden;
 }
 
 ul li {
   list-style-type: none;
+  margin: unset;
 }
 
 a,
@@ -22,6 +24,15 @@ h5 {
 input,
 input:focus {
   outline: none;
+}
+
+.container-scroll-disabled {
+  overflow: hidden !important;
+}
+
+.container-scroll-enabled {
+  overflow-y: auto !important;
+  height: 100vh !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./about.css";
 import { Header, Footer, ReceiveInfo } from "../Home/components";
 import { FAQ_QUESTIONS } from "../../data";
+import { useStateValue } from "../../store";
 
 function About() {
+  const { state } = useStateValue();
+  const { isHeaderModalVisible = false } = state || {};
   const [activeAnswer, setActiveAnswer] = useState();
 
   const handleSetAnswer = (value) => {
@@ -12,7 +15,11 @@ function About() {
   };
 
   return (
-    <div className="about-container">
+    <div
+      className={`about-container container-scroll-enabled ${
+        isHeaderModalVisible && "container-scroll-disabled"
+      }`}
+    >
       <Header />
       <section className="about-top-section">
         <div className="about-top-section-content">

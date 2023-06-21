@@ -1,9 +1,17 @@
 import "./contact.css";
 import { Header, Footer, ReceiveInfo } from "../Home/components";
+import { useStateValue } from "../../store";
 
 function Contact() {
+  const { state } = useStateValue();
+  const { isHeaderModalVisible = false } = state || {};
+
   return (
-    <div className="contact-container">
+    <div
+      className={`contact-container container-scroll-enabled ${
+        isHeaderModalVisible && "container-scroll-disabled"
+      }`}
+    >
       <Header />
       <section className="contact-top-section">
         <div className="contact-top-section-content">

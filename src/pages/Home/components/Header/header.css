@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .logo {
   height: 80px;
   width: 100px;
@@ -14,12 +18,14 @@
 
 .nav-links-container {
   display: flex;
-  justify-content: space-around;
+}
+
+.nav-links-container-hidden {
+  display: none;
 }
 
 .nav-link {
   color: #fff;
-  width: 100%;
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
@@ -56,4 +62,78 @@
 
 .login-btn:hover {
   opacity: 0.7;
+}
+
+.hidden-icon {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+  .header {
+    padding: 10px 5%;
+    width: 90%;
+  }
+
+  .hamburger-menu {
+    display: block;
+    height: 35px;
+    width: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .nav-links-container-sm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #005b30;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 1000;
+
+    overflow: hidden;
+  }
+
+  .nav-action-container {
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .active-nav-link {
+    border-bottom: 1px solid #fff;
+  }
+
+  .nav-link:not(:nth-child(4)) {
+    margin-right: 0;
+  }
+
+  .hidden-icon {
+    display: block;
+    height: 35px;
+    width: 30px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 2%;
+  }
+
+  .close-icon {
+    right: 5%;
+  }
+
+  .login-icon {
+    left: 5%;
+  }
 }

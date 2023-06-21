@@ -1,26 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./Home.css";
 import { Header, Footer, ReceiveInfo } from "./components";
+import { useStateValue } from "../../store";
+import { WHAT_OUR_STUDENTS_SAY } from "../../data";
 
 function Home() {
   const moreProgramsRef = useRef();
-  const [whatOurStudentsSay] = useState([
-    {
-      name: "JOSÉ LUIZ",
-      graduated: "GRADUATED IN ENGINEERING AT OUR UNIVERSITY",
-      description:
-        "From my course, I gained relevant industry specific experience.",
-      img: "close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray.jpg",
-    },
-    {
-      name: "JANE READS",
-      graduated: "GRADUATED IN OPTOMETRY AT OUR UNIVERSITY",
-      description:
-        "Today, I'm a medical practitioner thanks to the university.",
-      img: "close-up-young-attractive-charismatic-woman-isolated.jpg",
-    },
-  ]);
+  const { state } = useStateValue();
+  const { isHeaderModalVisible = false } = state || {};
 
   const handleViewMoreFaculties = () => {
     const { scrollLeft, offsetWidth, offsetLeft } = moreProgramsRef.current;
@@ -41,7 +29,11 @@ function Home() {
   };
 
   return (
-    <div className="home-container">
+    <div
+      className={`home-container container-scroll-enabled ${
+        isHeaderModalVisible && "container-scroll-disabled"
+      }`}
+    >
       <Header />
       <div>
         <section className="home-top-section">
@@ -153,7 +145,7 @@ function Home() {
         <section className="section-four">
           <div className="what-students-say-col-1">
             <h3 className="what-students-say-heading">WHAT OUR STUDENTS SAY</h3>
-            {whatOurStudentsSay.slice(0, 1).map((obj, index) => (
+            {WHAT_OUR_STUDENTS_SAY.slice(0, 1).map((obj, index) => (
               <div className="what-students-say-content" key={index}>
                 <div className="what-students-say-content-row">
                   <img
