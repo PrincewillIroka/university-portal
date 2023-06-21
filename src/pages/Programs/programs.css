@@ -6,7 +6,6 @@
   background-image: url("../../assets/program-bg.svg");
   height: 85vh;
   width: 100%;
-  margin-bottom: 60px;
 }
 
 .programs-top-section-content {
@@ -27,10 +26,57 @@
   height: 10rem;
 }
 
-.discover-courses-heading {
+.programs-section-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.programs-courses-heading {
   font-weight: 700;
   font-size: 36px;
   text-align: center;
   text-transform: capitalize;
   color: #005b30;
+  margin-bottom: 30px;
+}
+
+.programs-search-input {
+  width: 18rem;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #a4a4a4;
+  padding: 5px 7px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.programs-courses-subheading {
+  font-weight: 400;
+  font-size: 15px;
+  color: #005b30;
+  width: 40%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.courses-catalogue-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.courses-catalogue-wrapper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2%;
+  row-gap: 2rem;
+}
+
+.course-single {
+  height: 45vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

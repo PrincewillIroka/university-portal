@@ -1,6 +1,6 @@
-import React from "react";
 import "./programs.css";
-import { Header } from "../Home/components";
+import { Header, Footer, ReceiveInfo } from "../Home/components";
+import { PROGRAMS } from "../../data";
 
 function Programs() {
   return (
@@ -13,9 +13,28 @@ function Programs() {
           </span>
         </div>
       </section>
-      <section>
-        <h2 className="discover-courses-heading">Discover our courses</h2>
+      <section className="programs-section-two">
+        <h2 className="programs-courses-heading">Discover our courses</h2>
+        <input
+          placeholder="Search for a course"
+          className="programs-search-input"
+        />
+        <span className="programs-courses-subheading">
+          We have a wide range of programs suitable for your academic needs.
+          These programs are tailored to exceed the expectations of those who
+          enrol in them. Our hope is that you find them resourceful enough to
+          engage/start once your mind is made up.
+        </span>
+        <div className="courses-catalogue-container">
+          <div className="courses-catalogue-wrapper">
+            {PROGRAMS.map((program) => (
+              <div className="course-single">{program.name}</div>
+            ))}
+          </div>
+        </div>
       </section>
+      <ReceiveInfo />
+      <Footer />
     </div>
   );
 }

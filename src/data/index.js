@@ -19,3 +19,27 @@ export const FAQ_QUESTIONS = [
       "The first requirement is a BSc in course related to the one you want to study. Then you also need to have your transcript and other relevant documents ready for whenever we ask for them.",
   },
 ];
+
+export const WHAT_OUR_STUDENTS_SAY = [
+  {
+    name: "JOSÉ LUIZ",
+    graduated: "GRADUATED IN ENGINEERING AT OUR UNIVERSITY",
+    description:
+      "From my course, I gained relevant industry specific experience.",
+    img: "close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray.jpg",
+  },
+  {
+    name: "JANE READS",
+    graduated: "GRADUATED IN OPTOMETRY AT OUR UNIVERSITY",
+    description: "Today, I'm a medical practitioner thanks to the university.",
+    img: "close-up-young-attractive-charismatic-woman-isolated.jpg",
+  },
+];
+
+export const PROGRAMS = [
+  { name: "Publicidade", image: "program-1.svg" },
+  { name: "Publicidade", image: "program-1.svg" },
+  { name: "Publicidade", image: "program-1.svg" },
+  { name: "Publicidade", image: "program-1.svg" },
+  { name: "Publicidade", image: "program-1.svg" },
+];
