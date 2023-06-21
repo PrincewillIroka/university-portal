@@ -52,6 +52,7 @@ function Auth() {
                 className="auth-input"
                 placeholder="Enter username"
                 value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
           ) : (
