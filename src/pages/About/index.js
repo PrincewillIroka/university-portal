@@ -169,8 +169,8 @@ function About() {
       </section>
       <section className="about-section-five">
         <h2 className="faq-heading">Frequently Asked Questions</h2>
-        {FAQ_QUESTIONS.map((faq) => (
-          <div className="faq-single">
+        {FAQ_QUESTIONS.map((faq, index) => (
+          <div className="faq-single" key={index}>
             <div className="faq-row">
               <span className="faq-question">{faq.question}</span>
               <span

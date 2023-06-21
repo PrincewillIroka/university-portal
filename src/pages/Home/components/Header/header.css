@@ -1,10 +1,12 @@
 .header {
   display: flex;
-  position: absolute;
+  position: fixed;
   align-items: center;
-  padding: 20px 10%;
+  padding: 15px 10%;
   width: 80%;
   justify-content: space-between;
+  background-color: #005b30;
+  z-index: 2;
 }
 
 .hamburger-menu {
@@ -70,6 +72,7 @@
   .header {
     padding: 10px 5%;
     width: 90%;
+    overflow: hidden;
   }
 
   .hamburger-menu {

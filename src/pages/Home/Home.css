@@ -10,10 +10,12 @@
 
 .home-top-section-content {
   width: 100%;
-  padding-top: 17%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding-top: 5%;
 }
 
 .university-title {
@@ -372,4 +374,38 @@
   width: 100%;
   height: 50%;
   text-align: justify;
+}
+
+@media (max-width: 1200px) {
+  .section-four {
+    flex-direction: column;
+  }
+
+  .what-students-say-col-1 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .what-students-say-content {
+    align-items: center;
+  }
+
+  .what-students-say-col-2{
+
+  }
+}
+
+@media (max-width: 992px) {
+  .section-two {
+    flex-direction: column;
+  }
+
+  .section-two-img-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .section-two-right-container {
+    width: 100%;
+  }
 }
