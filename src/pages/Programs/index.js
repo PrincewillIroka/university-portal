@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./programs.css";
 import { Header, Footer, ReceiveInfo } from "../Home/components";
 import { PROGRAMS } from "../../data";
@@ -5,6 +6,7 @@ import { useStateValue } from "../../store";
 
 function Programs() {
   const { state } = useStateValue();
+  const [range, setRange] = useState({ start: 0, end: 12 });
   const { isHeaderModalVisible = false } = state || {};
 
   return (
@@ -35,10 +37,18 @@ function Programs() {
         </span>
         <div className="courses-catalogue-container">
           <div className="courses-catalogue-wrapper">
-            {PROGRAMS.map((program) => (
+            {PROGRAMS.splice(range.start, range.end).map((program) => (
               <div className="course-single">{program.name}</div>
             ))}
           </div>
+        </div>
+        <div>
+          <button>Previous</button>
+          <button
+            onClick={() => setRange({ start: range.end, end: range.end + 12 })}
+          >
+            Next
+          </button>
         </div>
       </section>
       <ReceiveInfo />

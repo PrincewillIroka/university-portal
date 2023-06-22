@@ -25,7 +25,7 @@ function Home() {
 
     moreProgramsRef.current.scroll({
       left: offset,
-      behavior: "",
+      behavior: "smooth",
     });
   };
 

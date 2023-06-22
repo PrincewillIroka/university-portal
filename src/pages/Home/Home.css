@@ -335,8 +335,10 @@
 }
 
 .what-students-say-col-2 {
-  width: 65%;
+  width: 62%;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 15px;
 }
 
 .what-students-say-hero-img1 {
@@ -361,13 +363,10 @@
   height: 50%;
   margin-bottom: 15px;
   border-radius: 3px;
-  -webkit-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
 }
 
 .what-students-say-detailed-heading {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   color: #01963d;
 }

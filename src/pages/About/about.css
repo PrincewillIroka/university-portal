@@ -57,8 +57,7 @@
 
 .about-section-three {
   background-color: #005b30;
-  height: 65vh;
-  padding: 0 20%;
+  padding: 4rem 20%;
   display: flex;
   align-items: center;
 }
@@ -214,7 +213,7 @@
 .about-section-five {
   display: flex;
   flex-direction: column;
-  padding: 2rem 20%;
+  padding: 4rem 20%;
   background-color: #eee;
 }
 
@@ -251,4 +250,38 @@
 .faq-answer-active {
   display: flex;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1280px) {
+  .about-section-four-content {
+    flex-direction: column;
+  }
+
+  .staff-container {
+    width: 100%;
+  }
+
+  .staff-container:not(:nth-child(4)) {
+    margin-bottom: 30px;
+  }
+
+  .staff-details-container-left {
+    left: 15%;
+  }
+
+  .staff-details-container-right {
+    right: 15%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-section-three {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section-four-content {
+    width: 80%;
+  }
 }
