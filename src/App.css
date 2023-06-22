@@ -24,6 +24,7 @@ h5 {
 input,
 input:focus {
   outline: none;
+  border: none;
 }
 
 .container-scroll-disabled {

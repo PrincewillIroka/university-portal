@@ -32,6 +32,7 @@
   color: #fff;
   font-weight: 600;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 
 .receive-information-form {
@@ -44,7 +45,7 @@
   background-color: #fff;
   border-radius: 5px;
   padding: 0 10px;
-  width: 20vw;
+  width: 15rem;
   font-size: 16px;
   margin-right: 10px;
 }
@@ -53,7 +54,8 @@
   background-color: #005b30;
   color: #fff;
   height: 40px;
-  padding: 0 15px;
+  width: 7rem;
+  text-align: center;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
@@ -65,7 +67,18 @@
 
 @media (max-width: 768px) {
   .receive-information-content {
-    width: 100%;
+    width: 80%;
     left: 10%;
+    right: 10%;
+    align-items: flex-start;
+  }
+
+  .receive-information-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .receive-information-input {
+    margin-bottom: 10px;
   }
 }

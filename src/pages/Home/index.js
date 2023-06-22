@@ -4,32 +4,28 @@ import "./Home.css";
 import { Header, Footer, ReceiveInfo } from "./components";
 import { useStateValue } from "../../store";
 import { WHAT_OUR_STUDENTS_SAY } from "../../data";
-import { useWindowDimensions } from "../../hooks";
 
 function Home() {
   const moreProgramsRef = useRef();
   const { state } = useStateValue();
-  const { pageWidth, pageHeight } = useWindowDimensions();
   const { isHeaderModalVisible = false } = state || {};
 
-  // console.log(pageWidth, pageHeight);
-
   const handleViewMoreFaculties = () => {
-    const { scrollLeft, offsetWidth, offsetLeft } = moreProgramsRef.current;
+    const { scrollLeft, scrollWidth, offsetLeft, offsetWidth } =
+      moreProgramsRef.current;
 
     let offset = 0;
     const currentScrollPosition = scrollLeft + offsetLeft;
-    // const aspectRatio = width / height;
-
-    if (currentScrollPosition >= offsetWidth) {
+    const num = scrollWidth - offsetWidth;
+    if (scrollLeft >= num) {
       offset = -currentScrollPosition;
     } else {
-      offset = scrollLeft + pageWidth > 1024 ? 320 : 120;
+      offset = currentScrollPosition;
     }
 
     moreProgramsRef.current.scroll({
       left: offset,
-      behavior: "smooth",
+      behavior: "",
     });
   };
 
@@ -42,9 +38,9 @@ function Home() {
       <Header />
       <section className="home-top-section">
         <div className="home-top-section-content">
-          <div className="university-title">
-            <span>University</span>
-            <span>Portal</span>
+          <div className="university-title-container">
+            <span className="university-title-text">University </span>
+            <span className="university-title-text">Portal </span>
           </div>
           <button className="btn-explore">Explore</button>
           <div className="stat-container">

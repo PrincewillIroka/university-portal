@@ -18,17 +18,20 @@
   padding-top: 5%;
 }
 
-.university-title {
+.university-title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.university-title-text {
   text-align: center;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 600;
   color: #fff;
-  line-height: 80px;
-  margin-bottom: 1.5%;
+  line-height: 4.2rem;
 }
 
 .btn-explore {
@@ -39,9 +42,9 @@
   text-transform: uppercase;
   color: #fff;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 3%;
+  margin-bottom: 2rem;
 }
 
 .btn-explore:hover {
@@ -51,11 +54,12 @@
 .stat-container {
   width: 50%;
   background-color: #01963d;
-  height: 100px;
+  /* height: 100px; */
   border-radius: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 1rem 0;
 }
 
 .stat-item {
@@ -65,7 +69,6 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  height: 60%;
 }
 
 .stat-item:not(:nth-child(4)) {
@@ -87,7 +90,7 @@
 .section-two {
   display: flex;
   justify-content: space-between;
-  padding: 2.5rem 10%;
+  padding: 4rem 10%;
 }
 
 .section-two-img-container {
@@ -105,11 +108,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0 20px;
 }
 
 .welcome-heading {
   color: #005b30;
   font-size: 21px;
+  margin-bottom: 10px;
 }
 
 .welcome-description {
@@ -132,13 +138,13 @@
 
 .section-three {
   background-color: #f0efef;
-  height: 400px;
-  padding: 2rem 0 2rem 10%;
+  height: 50vh;
+  padding: 4rem 0 4rem 10%;
   display: flex;
 }
 
 .section-three-col-1 {
-  width: 30%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -184,7 +190,7 @@
 
 .section-three-col-2 {
   display: flex;
-  width: 70%;
+  width: 80%;
   overflow: hidden;
 }
 
@@ -194,9 +200,7 @@
   border-radius: 5px;
   height: 100%;
   width: 100%;
-  box-shadow: 10px -4px 0px -13px rgba(0, 0, 0, 0.71);
-  -webkit-box-shadow: 10px -4px 0px -13px rgba(0, 0, 0, 0.71);
-  -moz-box-shadow: 10px -4px 0px -13px rgba(0, 0, 0, 0.71);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
 }
 
@@ -228,14 +232,18 @@
 
 .section-four {
   display: flex;
-  padding: 3rem 10%;
+  padding: 4rem 10%;
+  justify-content: space-between;
 }
 
 .what-students-say-col-1 {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  padding: 5% 0;
+  padding: 5% 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .what-students-say-heading {
@@ -251,6 +259,7 @@
   animation-name: slideIn;
   animation-duration: 1s;
   width: 100%;
+  align-items: center;
 }
 
 @keyframes slideIn {
@@ -295,11 +304,13 @@
   color: #005b30;
   opacity: 0.5;
   text-transform: uppercase;
+  width: 70%;
 }
 
 .what-students-say-description {
   font-weight: 400;
   color: #005b30;
+  text-align: center;
 }
 
 .what-students-say-nav-row {
@@ -324,17 +335,16 @@
 }
 
 .what-students-say-col-2 {
-  height: 60vh;
-  width: 50%;
+  width: 65%;
   display: flex;
 }
 
 .what-students-say-hero-img1 {
-  height: 100%;
+  height: 50vh;
   width: 50%;
   object-fit: cover;
   border-radius: 5px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .what-students-say-detailed-col {
@@ -351,7 +361,6 @@
   height: 50%;
   margin-bottom: 15px;
   border-radius: 3px;
-  padding: 10px;
   -webkit-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
@@ -384,14 +393,15 @@
   .what-students-say-col-1 {
     width: 100%;
     align-items: center;
+    margin-bottom: 30px;
   }
 
   .what-students-say-content {
     align-items: center;
   }
 
-  .what-students-say-col-2{
-
+  .what-students-say-col-2 {
+    width: 100%;
   }
 }
 
@@ -407,5 +417,51 @@
 
   .section-two-right-container {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-top-section-content {
+    padding-top: 10%;
+  }
+
+  .stat-container {
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+    row-gap: 10px;
+  }
+
+  .stat-item {
+    width: 49.5%;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .university-title-text {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .what-students-say-col-2 {
+    flex-direction: column;
+  }
+
+  .what-students-say-hero-img1 {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .what-students-say-detailed-col {
+    width: 100%;
+  }
+
+  .section-two {
+    padding: 2.5rem 10%;
+  }
+
+  .section-three {
   }
 }
