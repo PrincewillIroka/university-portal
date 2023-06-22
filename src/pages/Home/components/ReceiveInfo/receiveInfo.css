@@ -62,3 +62,10 @@
 .receive-information-button:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .receive-information-content {
+    width: 100%;
+    left: 10%;
+  }
+}

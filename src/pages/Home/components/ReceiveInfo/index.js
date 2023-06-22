@@ -16,7 +16,7 @@ function ReceiveInfo() {
         <h5 className="receive-information-heading2">
           Fill in the field below to receive
           <br />
-          more information about your course.
+          more information about our courses.
         </h5>
         <div className="receive-information-form">
           <input
