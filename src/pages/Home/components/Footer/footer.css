@@ -34,7 +34,6 @@
 
 .footer-row-2 {
   margin-bottom: 36px;
-  height: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -48,4 +47,27 @@
 
 .copyright-text {
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .footer-row-2 {
+    flex-wrap: wrap;
+  }
+
+  .footer-row-2-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-row-2-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
