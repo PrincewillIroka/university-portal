@@ -6,6 +6,7 @@ import { useStateValue } from "../../store";
 
 function Programs() {
   const { state } = useStateValue();
+  const [allPrograms, setAllPrograms] = useState(PROGRAMS);
   const [range, setRange] = useState({ start: 0, end: 12 });
   const { isHeaderModalVisible = false } = state || {};
 
@@ -23,6 +24,14 @@ function Programs() {
       end = start + 12;
       setRange({ start, end });
     }
+  };
+
+  const handleSearch = (e) => {
+    const searchValue = e.target.value.trim();
+    const allPrograms = PROGRAMS.filter((program) =>
+      program.title.toLowerCase().includes(searchValue)
+    );
+    setAllPrograms(allPrograms);
   };
 
   return (
@@ -44,6 +53,7 @@ function Programs() {
         <input
           placeholder="Search for a course"
           className="programs-search-input"
+          onChange={handleSearch}
         />
         <span className="programs-courses-subheading">
           We have a wide range of programs suitable for your academic needs.
@@ -53,7 +63,7 @@ function Programs() {
         </span>
         <div className="courses-catalogue-container">
           <div className="courses-catalogue-wrapper">
-            {PROGRAMS.slice(range.start, range.end).map((program, index) => (
+            {allPrograms.slice(range.start, range.end).map((program, index) => (
               <div className="course-single" key={index}>
                 <img
                   src={`/images/programs/${program.image}`}
@@ -73,6 +83,7 @@ function Programs() {
               range.start <= 0 && "btn-disabled"
             }`}
             onClick={() => handleSetRange("prev")}
+            disabled={range.start <= 0}
           >
             Previous
           </button>
@@ -81,6 +92,7 @@ function Programs() {
               range.end >= PROGRAMS.length && "btn-disabled"
             }`}
             onClick={() => handleSetRange("next")}
+            disabled={range.end >= PROGRAMS.length}
           >
             Next
           </button>

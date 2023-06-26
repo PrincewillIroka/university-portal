@@ -38,7 +38,7 @@
 
 .programs-courses-heading {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.25rem;
   text-align: center;
   text-transform: capitalize;
   color: #005b30;
@@ -53,6 +53,10 @@
   padding: 5px 7px;
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.programs-search-input:focus {
+  border: 1px solid #a4a4a4;
 }
 
 .programs-courses-subheading {
@@ -157,11 +161,29 @@
   .programs-best-for-you-text {
     width: 70%;
   }
+
+  .courses-catalogue-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .programs-best-for-you-text {
     width: 80%;
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .courses-catalogue-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .programs-courses-subheading {
+    width: 80%;
+  }
+
+  .programs-courses-heading {
+    font-size: 1.5rem;
   }
 }
