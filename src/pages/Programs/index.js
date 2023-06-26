@@ -9,6 +9,22 @@ function Programs() {
   const [range, setRange] = useState({ start: 0, end: 12 });
   const { isHeaderModalVisible = false } = state || {};
 
+  const handleSetRange = (direction) => {
+    let start = range.start;
+    let end = range.end;
+    if (direction === "prev") {
+      if (start > 0) {
+        start = start - 12;
+        end = start + 12;
+        setRange({ start, end });
+      }
+    } else {
+      start = start + 12;
+      end = start + 12;
+      setRange({ start, end });
+    }
+  };
+
   return (
     <div
       className={`programs-container container-scroll-enabled ${
@@ -37,17 +53,34 @@ function Programs() {
         </span>
         <div className="courses-catalogue-container">
           <div className="courses-catalogue-wrapper">
-            {PROGRAMS.splice(range.start, range.end).map((program, index) => (
+            {PROGRAMS.slice(range.start, range.end).map((program, index) => (
               <div className="course-single" key={index}>
-                {program.name}
+                <img
+                  src={`/images/programs/${program.image}`}
+                  className="course-img"
+                  alt="Program"
+                />
+                <div className="course-title-wrapper">
+                  <span className="course-name">{program.title}</span>
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <div>
-          <button>Previous</button>
+        <div className="programs-btn-container">
           <button
-            onClick={() => setRange({ start: range.end, end: range.end + 12 })}
+            className={`btn-navigate btn-prev ${
+              range.start <= 0 && "btn-disabled"
+            }`}
+            onClick={() => handleSetRange("prev")}
+          >
+            Previous
+          </button>
+          <button
+            className={`btn-navigate ${
+              range.end >= PROGRAMS.length && "btn-disabled"
+            }`}
+            onClick={() => handleSetRange("next")}
           >
             Next
           </button>
