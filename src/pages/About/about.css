@@ -14,7 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 5%;
 }
 
 .about-us-info {
@@ -80,7 +79,7 @@
 .vc-info-container {
   display: flex;
   margin-right: 30px;
-  width: 50%;
+  width: 30%;
   justify-content: flex-end;
 }
 
@@ -281,6 +280,14 @@
 }
 
 @media (max-width: 1280px) {
+  .vc-info-container {
+    align-items: center;
+  }
+
+  .vc-details-container {
+    width: 60%;
+  }
+
   .about-us-info {
     width: 50%;
     height: 15rem;
@@ -340,6 +347,7 @@
 @media (max-width: 768px) {
   .about-us-info {
     width: 80%;
+    font-size: 2.5rem;
   }
 
   .about-section-two {
@@ -355,6 +363,14 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .vc-info-container {
+    width: 100%;
+  }
+
+  .vc-details-container {
+    width: 100%;
   }
 
   .books-img {

@@ -19,7 +19,7 @@ function Programs() {
       <section className="programs-top-section">
         <div className="programs-top-section-content">
           <span className="programs-best-for-you-text">
-            We have the best programs for you
+            We have the best graduate programs.
           </span>
         </div>
       </section>
@@ -37,8 +37,10 @@ function Programs() {
         </span>
         <div className="courses-catalogue-container">
           <div className="courses-catalogue-wrapper">
-            {PROGRAMS.splice(range.start, range.end).map((program) => (
-              <div className="course-single">{program.name}</div>
+            {PROGRAMS.splice(range.start, range.end).map((program, index) => (
+              <div className="course-single" key={index}>
+                {program.name}
+              </div>
             ))}
           </div>
         </div>
