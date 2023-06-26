@@ -59,8 +59,8 @@ function About() {
           </div>
         </div>
         <div className="about-section-two-col-2">
-          <img src="/images/about/books.svg" className="books-img" />
-          <img src="/images/about/pc.svg" className="books-img" />
+          <img src="/images/about/books.svg" className="books-img" alt="Books"/>
+          <img src="/images/about/pc.svg" alt="books-img" className="PC"/>
         </div>
       </section>
       <section className="about-section-three">

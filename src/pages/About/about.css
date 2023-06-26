@@ -382,4 +382,10 @@
   .about-section-four-content {
     width: 80%;
   }
+
+  .staff-img {
+    width: 120px;
+    height: 120px;
+    top: 25%;
+  }
 }
