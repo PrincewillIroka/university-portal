@@ -12,66 +12,94 @@
   height: 100%;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-top: 20%;
+  padding-top: 5%;
 }
 
 .about-us-info {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 600;
   color: #fff;
-  max-width: 40%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 10rem;
+  width: 40%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-section-two {
   display: flex;
-  flex-direction: column;
-  padding: 2rem 10%;
+  padding: 4rem 10%;
+  justify-content: space-between;
+  width: 80%;
 }
 
-.about-section-two-row-1 {
+.about-section-two-col-1 {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 49%;
 }
 
 .about-section-two-rendition {
-  width: 50%;
   color: #005b30;
   font-weight: 400;
   font-size: 17px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .about-section-two-rendition-2 {
   font-size: 20px;
-  font-weight: 600;
   font-weight: 700;
   font-size: 24px;
   color: #01963d;
-  width: 50%;
   margin-top: 30px;
+}
+
+.about-section-two-col-2 {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+.books-img {
+  height: 40vh;
+  width: 40wh;
+  margin-bottom: 30px;
 }
 
 .about-section-three {
   background-color: #005b30;
-  padding: 4rem 20%;
+  padding: 4rem 10%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.vc-info-container {
+  display: flex;
+  margin-right: 30px;
+  width: 50%;
+  justify-content: flex-end;
 }
 
 .vc-img {
   height: 50vh;
-  margin-right: 5rem;
 }
 
 .vc-details-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
   color: #ffffff;
+  justify-content: center;
+  width: 50%;
+}
+
+.vc-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
 
 .vc-name {
@@ -253,6 +281,11 @@
 }
 
 @media (max-width: 1280px) {
+  .about-us-info {
+    width: 50%;
+    height: 15rem;
+  }
+
   .about-section-four-content {
     flex-direction: column;
   }
@@ -275,12 +308,61 @@
 }
 
 @media (max-width: 1024px) {
+  .about-us-info {
+    width: 60%;
+  }
+
   .about-section-three {
     flex-direction: column;
+  }
+
+  .vc-info-container {
+    margin-right: 0;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .vc-details-wrapper {
+    align-items: center;
+  }
+
+  .vc-details-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-us-info {
+    width: 70%;
   }
 }
 
 @media (max-width: 768px) {
+  .about-us-info {
+    width: 80%;
+  }
+
+  .about-section-two {
+    flex-direction: column;
+  }
+
+  .about-section-two-col-1 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-section-two-col-2 {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .books-img {
+    height: 48%;
+    width: 48%;
+    margin-bottom: 0;
+  }
+
   .about-section-four-content {
     width: 80%;
   }

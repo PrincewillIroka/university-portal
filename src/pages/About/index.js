@@ -29,7 +29,7 @@ function About() {
         </div>
       </section>
       <section className="about-section-two">
-        <div className="about-section-two-row-1">
+        <div className="about-section-two-col-1">
           <div className="about-section-two-rendition">
             Do you like innovation, creativity and entrepreneurship? The
             Publicity and Propaganda course can be the form of expression you
@@ -52,29 +52,37 @@ function About() {
             common cores, shared disciplines and diversified teaching and
             learning methodologies.
           </div>
-          <div></div>
+          <div className="about-section-two-rendition-2">
+            As you embark on your journey at our University, we urge you to make
+            the most of the opportunities for the best experiences of your
+            future career!
+          </div>
         </div>
-        <div className="about-section-two-rendition-2">
-          As you embark on your journey at our University, we urge you to make
-          the most of the opportunities for the best experiences of your future
-          career!
+        <div className="about-section-two-col-2">
+          <img src="/images/about/books.svg" className="books-img" />
+          <img src="/images/about/pc.svg" className="books-img" />
         </div>
       </section>
       <section className="about-section-three">
-        <img
-          src="/images/about/vc.svg"
-          className="vc-img"
-          alt="Vice Chancellor"
-        />
+        <div className="vc-info-container">
+          <img
+            src="/images/about/vc.svg"
+            className="vc-img"
+            alt="Vice Chancellor"
+          />
+        </div>
+
         <div className="vc-details-container">
-          <span className="vc-name">Carolina Silva</span>
-          <span className="vc-title">Vice Chancellor</span>
+          <div className="vc-details-wrapper">
+            <span className="vc-name">Carolina Silva</span>
+            <span className="vc-title">Vice Chancellor</span>
+          </div>
           <span className="vc-speech">
-            The core values have projected the image of this institution as a
-            centre for learning and character moulding of our students. The core
-            values also depict the vision of our University which is to nurture
-            a University of high international standard so that the quality of
-            the institution is rated the best in the world.
+            The core values we have worked hard to project, is an image of this
+            institution as a centre for learning and character moulding of our
+            students. The core values also depict the vision of our University
+            which is to nurture a University of high international standard so
+            that the quality of the institution is rated the best in the world.
           </span>
           <span className="vc-speech">
             Our policies are geared towards instituting e-learning and
