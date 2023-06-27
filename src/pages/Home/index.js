@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./Home.css";
 import { Header, Footer, ReceiveInfo } from "./components";
@@ -8,6 +9,7 @@ import { WHAT_OUR_STUDENTS_SAY } from "../../data";
 function Home() {
   const moreProgramsRef = useRef();
   const { state } = useStateValue();
+  const navigate = useNavigate();
   const { isHeaderModalVisible = false } = state || {};
 
   const handleViewMoreFaculties = () => {
@@ -29,6 +31,10 @@ function Home() {
     });
   };
 
+  const handleExplore = () => {
+    navigate("/programs");
+  };
+
   return (
     <div
       className={`home-container container-scroll-enabled ${
@@ -42,7 +48,9 @@ function Home() {
             <span className="university-title-text">University </span>
             <span className="university-title-text">Portal </span>
           </div>
-          <button className="btn-explore">Explore</button>
+          <button className="btn-explore" onClick={handleExplore}>
+            Explore
+          </button>
           <div className="stat-container">
             <div className="stat-item">
               <span className="stat-number">80+</span>
