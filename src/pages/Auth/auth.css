@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/program-bg.svg");
+  background-image: url("../../assets/nguyen-khanh-ly-liiusuaISP0-unsplash.jpg");
   position: relative;
 }
 
@@ -14,13 +14,14 @@
   margin-bottom: 50px;
   color: #fff;
   font-size: 25px;
+  font-weight: 600;
 }
 
 .auth-content {
   width: 45%;
   height: 60%;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: rgb(255, 255, 255);
 }
 
 .auth-header {
@@ -38,11 +39,14 @@
   font-size: 17px;
   font-weight: 600;
   border-bottom: 1px solid #e8e8e8;
-  color: #fff;
+  color: #01963d;
 }
 
 .auth-header-text-active {
   background-color: #01963d;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .auth-body {
