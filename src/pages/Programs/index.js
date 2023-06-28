@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./programs.css";
 import { Header, Footer, ReceiveInfo } from "../Home/components";
 import { PROGRAMS } from "../../data";
@@ -8,6 +9,7 @@ function Programs() {
   const { state } = useStateValue();
   const [allPrograms, setAllPrograms] = useState(PROGRAMS);
   const [range, setRange] = useState({ start: 0, end: 12 });
+  const navigate = useNavigate();
   const { isHeaderModalVisible = false } = state || {};
 
   const handleSetRange = (direction) => {
@@ -32,6 +34,10 @@ function Programs() {
       program.title.toLowerCase().includes(searchValue)
     );
     setAllPrograms(allPrograms);
+  };
+
+  const handleNavigation = (route) => {
+    navigate(`/program/${route}`);
   };
 
   return (
@@ -64,7 +70,11 @@ function Programs() {
         <div className="courses-catalogue-container">
           <div className="courses-catalogue-wrapper">
             {allPrograms.slice(range.start, range.end).map((program, index) => (
-              <div className="course-single" key={index}>
+              <div
+                className="course-single"
+                key={index}
+                onClick={() => handleNavigation(program.page)}
+              >
                 <img
                   src={`/images/programs/${program.image}`}
                   className="course-img"

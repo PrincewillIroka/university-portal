@@ -1,3 +1,4 @@
+import GoogleMapReact from "google-map-react";
 import "./contact.css";
 import { Header, Footer, ReceiveInfo } from "../Home/components";
 import { useStateValue } from "../../store";
@@ -5,6 +6,13 @@ import { useStateValue } from "../../store";
 function Contact() {
   const { state } = useStateValue();
   const { isHeaderModalVisible = false } = state || {};
+  const mapProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 20,
+  };
 
   return (
     <div
@@ -26,14 +34,21 @@ function Contact() {
             <h2 className="contact-heading">Contact Us</h2>
             <input placeholder="Name" className="contact-input-field" />
             <input placeholder="Email" className="contact-input-field" />
-            <textarea className="contact-textarea"></textarea>
+            <textarea className="contact-textarea" placeholder="Type message here..."></textarea>
             <button className="contact-btn">Send</button>
           </div>
           <div className="contact-col-2">
             <address>123 New Drive Layout, Good Road, One Province</address>
             <span>campus@universityportal.com</span>
             <span>(41) 23456789</span>
-            <div className="contact-map"></div>
+            <div className="contact-map">
+              <GoogleMapReact
+                bootstrapURLKeys={{ key: "" }}
+                defaultCenter={mapProps.center}
+                defaultZoom={mapProps.zoom}
+                yesIWantToUseGoogleMapApiInternals
+              ></GoogleMapReact>
+            </div>
           </div>
         </div>
       </section>

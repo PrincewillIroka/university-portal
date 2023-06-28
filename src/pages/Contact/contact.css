@@ -3,7 +3,9 @@
 }
 
 .contact-top-section {
-  background-image: url("../../assets/julian-hochgesang-psGV5KhidlY-unsplash.jpg");
+  background-image: url("../../assets/joseph-frank-XGC_1eH_ZGI-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
   height: 85vh;
   width: 100%;
 }
@@ -13,17 +15,20 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 20%;
+  align-items: center;
 }
 
 .contact-best-for-you-text {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 600;
   color: #fff;
-  max-width: 40%;
+  width: 40%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 10rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-section-two {
@@ -39,9 +44,11 @@
 }
 
 .contact-section-two-content {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 30px;
 }
 
 .contact-col-1 {
@@ -51,32 +58,42 @@
   -webkit-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 2px 0px -4px rgba(0, 0, 0, 0.75);
+  height: 60vh;
+  align-items: center;
 }
 
-.contact-input-field {
-  height: 30px;
-  border-radius: 1px solid #ccc;
-  padding: 0 5px;
+.contact-input-field,
+.contact-input-field:focus {
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0 7px;
   margin-bottom: 25px;
   font-size: 17px;
-  width: calc(100% - 10px);
+  width: 70%;
 }
 
 .contact-textarea {
   height: 150px;
-  width: calc(100% - 10px);
+  width: 70%;
   resize: none;
   margin-bottom: 30px;
-  padding: 5px;
+  padding: 7px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
 }
 
 .contact-btn {
   background-color: #01963d;
   border-radius: 5px;
   color: #fff;
-  padding: 8px 25px;
+  padding: 8px 0;
   font-weight: bold;
   text-align: center;
+  width: 73%;
 }
 
 .contact-btn:hover {
@@ -87,9 +104,50 @@
   display: flex;
   flex-direction: column;
   width: 45%;
+  height: 60vh;
 }
 
 .contact-map {
   flex: 1;
   border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+@media (max-width: 1280px) {
+  .contact-best-for-you-text {
+    width: 50%;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-best-for-you-text {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-section-two-content {
+    flex-direction: column;
+  }
+
+  .contact-col-1 {
+    margin-bottom: 50px;
+  }
+
+  .contact-col-1,
+  .contact-col-2 {
+    width: 100%;
+  }
+
+  .contact-best-for-you-text {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-best-for-you-text {
+    width: 80%;
+    font-size: 2.5rem;
+  }
 }

@@ -4,6 +4,8 @@
 
 .home-top-section {
   background-image: url("../../assets/program-bg.svg");
+  background-size: cover;
+  background-position: center;
   height: 85vh;
   width: 100%;
 }

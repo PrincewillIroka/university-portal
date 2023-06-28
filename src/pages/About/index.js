@@ -41,10 +41,12 @@ function About() {
             campaigns; creation of texts and images; analysis of impacts and
             returns of actions.
             <br />
+            <br />
             You can work in customer service, creation, product and brand
             management, marketing, media, research, production and sales
             promotion in advertising agencies, companies from different segments
             or as a freelancer or entrepreneur.
+            <br />
             <br />
             Our courses offer pedagogical and curricular innovations such as a
             flexible semester-long curriculum, experiences in university
@@ -59,8 +61,12 @@ function About() {
           </div>
         </div>
         <div className="about-section-two-col-2">
-          <img src="/images/about/books.svg" className="books-img" alt="Books"/>
-          <img src="/images/about/pc.svg" alt="books-img" className="PC"/>
+          <img
+            src="/images/about/books.svg"
+            className="books-img"
+            alt="Books"
+          />
+          <img src="/images/about/pc.svg" className="books-img" alt="PC" />
         </div>
       </section>
       <section className="about-section-three">

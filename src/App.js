@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Home, About, Programs, Contact, Auth } from "./pages";
+import { Home, About, Programs, Contact, Auth, Program } from "./pages";
 import { StateContext, reducer } from "./store";
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Auth />} />
           <Route path="/signup" element={<Auth />} />
+          <Route path="/program/:program_name" element={<Program />} />
         </Routes>
       </Router>
     </StateContext.Provider>

@@ -37,17 +37,33 @@ export const WHAT_OUR_STUDENTS_SAY = [
 ];
 
 export const PROGRAMS = [
-  { title: "Biomedical Science", image: "program-1.svg", page: "" },
+  {
+    title: "Biomedical Science",
+    image: "program-1.svg",
+    page: "biomedical-science",
+  },
   {
     title: "Artificial Intelligence and Machine Learning",
     image: "program-2.svg",
     page: "ai-machine-learning",
   },
-  { title: "Robotics Engineering", image: "program-3.svg", page: "robotics-engineering" },
+  {
+    title: "Robotics Engineering",
+    image: "program-3.svg",
+    page: "robotics-engineering",
+  },
   { title: "Economics", image: "program-4.svg", page: "economics" },
-  { title: "Pharmaceutical Science", image: "program-1.svg", page: "pharma-science" },
-  { title: "Environmental Geo-Chemistry", image: "program-2.svg", page: "" },
-  { title: "Business Administration", image: "program-3.svg", page: "" },
+  {
+    title: "Pharmaceutical Science",
+    image: "program-1.svg",
+    page: "pharmaceutical-science",
+  },
+  {
+    title: "Environmental Geo-Chemistry",
+    image: "program-2.svg",
+    page: "environmental-geo-chemistry",
+  },
+  { title: "Business Administration", image: "program-3.svg", page: "business-administration" },
   { title: "International Human Rights", image: "program-4.svg", page: "" },
   { title: "Biology", image: "program-1.svg", page: "" },
   { title: "Clinical Medicine", image: "program-2.svg", page: "" },

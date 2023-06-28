@@ -4,6 +4,8 @@
 
 .about-top-section {
   background-image: url("../../../public/images/keck-field-chapman-university.jpeg");
+  background-size: cover;
+  background-position: center;
   height: 85vh;
   width: 100%;
 }
@@ -46,7 +48,7 @@
   color: #005b30;
   font-weight: 400;
   font-size: 17px;
-  /* text-align: justify; */
+  text-align: justify;
 }
 
 .about-section-two-rendition-2 {
@@ -55,6 +57,7 @@
   font-size: 24px;
   color: #01963d;
   margin-top: 30px;
+  text-align: left;
 }
 
 .about-section-two-col-2 {
@@ -65,7 +68,7 @@
 
 .books-img {
   height: 40vh;
-  width: 40wh;
+  width: 40vw !important;
   margin-bottom: 30px;
 }
 
