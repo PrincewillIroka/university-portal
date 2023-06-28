@@ -46,31 +46,20 @@ function Auth() {
           </span>
         </div>
         <div className="auth-body">
-          {getActiveTab("login") ? (
-            <div className="login-container">
-              <input
-                className="auth-input"
-                placeholder="Enter username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-          ) : (
-            <div className="signup-container">
-              <input
-                className="auth-input"
-                placeholder="Enter username"
-                value={password}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input
-                className="auth-input"
-                placeholder="Enter password"
-                type="password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-          )}
+          <div className="auth-body-wrapper">
+            <input
+              className="auth-input"
+              placeholder="Enter username"
+              value={password}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="auth-input"
+              placeholder="Enter password"
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
           <button className="submit-btn" onClick={handleSubmit}>
             {getActiveTab("login") ? "Login" : "Sign Up"}
           </button>
