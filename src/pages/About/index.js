@@ -191,7 +191,11 @@ function About() {
                 className="faq-plus-icon"
                 onClick={() => handleSetAnswer(faq.question)}
               >
-                &#43;
+                {activeAnswer === faq.question ? (
+                  <span>&times;</span>
+                ) : (
+                  <span>&#43;</span>
+                )}
               </span>
             </div>
             <span
