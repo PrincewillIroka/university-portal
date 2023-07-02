@@ -50,13 +50,14 @@ function Auth() {
             <input
               className="auth-input"
               placeholder="Enter username"
-              value={password}
+              value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               className="auth-input"
               placeholder="Enter password"
               type="password"
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
