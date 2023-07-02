@@ -1,5 +1,6 @@
 .home-container {
   position: relative;
+  overflow-x: hidden;
 }
 
 .home-top-section {
@@ -90,9 +91,26 @@
 }
 
 .section-two {
-  display: flex;
+  padding: 5rem 10%;
+}
+
+.section-two-wrapper {
+  display: none;
   justify-content: space-between;
-  padding: 4rem 10%;
+}
+
+.section-two-wrapper-animation {
+  animation: slideInFromRight 1s;
+  display: flex;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0;
+  }
 }
 
 .section-two-img-container {
@@ -140,9 +158,26 @@
 
 .section-three {
   background-color: #f0efef;
+  padding: 5rem 0 5rem 10%;
+}
+
+.section-three-wrapper {
+  display: none;
   height: 50vh;
-  padding: 4rem 0 4rem 10%;
+}
+
+.section-three-wrapper-animation {
+  animation: slideInFromBottom 1s;
   display: flex;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    margin-top: 50%;
+  }
+  100% {
+    margin-top: 0;
+  }
 }
 
 .section-three-col-1 {
@@ -233,9 +268,26 @@
 }
 
 .section-four {
-  display: flex;
-  padding: 4rem 10%;
+  padding: 5rem 10%;
+}
+
+.section-four-wrapper {
+  display: none;
   justify-content: space-between;
+}
+
+.section-four-wrapper-animation {
+  animation: slideInFromTop 1s;
+  display: flex;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    margin-right: 50%;
+  }
+  100% {
+    margin-right: 0;
+  }
 }
 
 .what-students-say-col-1 {
@@ -387,7 +439,7 @@
 }
 
 @media (max-width: 1200px) {
-  .section-four {
+  .section-four-wrapper {
     flex-direction: column;
   }
 
@@ -407,7 +459,7 @@
 }
 
 @media (max-width: 992px) {
-  .section-two {
+  .section-two-wrapper {
     flex-direction: column;
   }
 
