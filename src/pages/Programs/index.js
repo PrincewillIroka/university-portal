@@ -36,8 +36,9 @@ function Programs() {
     setAllPrograms(allPrograms);
   };
 
-  const handleNavigation = (route) => {
-    navigate(`/program/${route}`);
+  const handleNavigation = (program) => {
+    const { page = "" } = program;
+    navigate(`/program/${page}`, { state: { program } });
   };
 
   return (
@@ -73,7 +74,7 @@ function Programs() {
               <div
                 className="course-single"
                 key={index}
-                onClick={() => handleNavigation(program.page)}
+                onClick={() => handleNavigation(program)}
               >
                 <img
                   src={`/images/programs/${program.image}`}

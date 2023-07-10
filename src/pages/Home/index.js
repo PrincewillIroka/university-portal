@@ -110,7 +110,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-two">
+      <section className="home-section-two">
         <div className="section-two-wrapper" ref={sectionTwoRef}>
           <div className="section-two-img-container">
             <img
@@ -131,7 +131,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-three">
+      <section className="home-section-three">
         <div className="section-three-wrapper" ref={sectionThreeRef}>
           <div className="section-three-col-1">
             <h3 className="know-our-courses-heading">
@@ -193,7 +193,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-four">
+      <section className="home-section-four">
         <div className="section-four-wrapper" ref={sectionFourRef}>
           <div className="what-students-say-col-1">
             <h3 className="what-students-say-heading">WHAT OUR STUDENTS SAY</h3>

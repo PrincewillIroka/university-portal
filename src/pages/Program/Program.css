@@ -1,0 +1,87 @@
+.program-container {
+  position: relative;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.program-section-one {
+  /* position: absolute;
+  top: 95px; */
+  /* margin-top: 92px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  width: 100%;
+  height: 75vh;
+  background-image: url("../../assets/annie-spratt-QckxruozjRg-unsplash.jpg");
+  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.program-title-heading {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.program-title-small {
+  font-weight: 500;
+}
+
+.program-title-small-1 {
+  margin-right: 5px;
+}
+
+.program-title-small-2 {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.program-title-small-3 {
+  margin-left: 10px;
+}
+
+.program-section-two {
+}
+
+.program-section-two-row-header {
+  display: flex;
+  padding: 0 10%;
+  font-size: 1.2rem;
+  height: 100px;
+  background-color: rgba(204, 204, 204, 0.4);
+}
+
+.program-item-single {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.program-item-single-active {
+  background-color: #01963d;
+  color: #fff;
+}
+
+.program-section-two-row-body {
+  height: 50rem;
+  padding: 30px 10%;
+}
+
+.admission-requirements-section{
+  display: flex;
+  flex-direction: row;
+}
+
+ul .admission-requirements-list{
+}
+
+.admission-requirement-item{
+  color: #01963d;
+  list-style-type: decimal;
+}
