@@ -73,15 +73,39 @@
   padding: 30px 10%;
 }
 
-.admission-requirements-section{
+.admission-requirements-section {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
-ul .admission-requirements-list{
+.admission-requirements-list {
+  width: 30%;
 }
 
-.admission-requirement-item{
+.admission-requirement-item {
   color: #01963d;
   list-style-type: decimal;
+}
+
+.admission-requirements-details {
+  width: 70%;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.admission-requirements-proof-of-language-list,
+.academic-references-list,
+.resume-list,
+.statement-of-purpose-list {
+  padding-inline-start: 30px;
+}
+
+.admission-requirements-proof-of-language-list > li,
+.academic-references-list > li,
+.resume-list > li,
+.statement-of-purpose-list > li {
+  list-style-type: disc;
+  text-align: start;
 }
