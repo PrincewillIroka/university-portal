@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./Home.css";
@@ -14,6 +14,32 @@ function Home() {
   const { state } = useStateValue();
   const navigate = useNavigate();
   const { isHeaderModalVisible = false } = state || {};
+
+  useEffect(() => {
+    const elements = [
+      { ref: sectionTwoRef, tag: "two" },
+      { ref: sectionThreeRef, tag: "three" },
+      { ref: sectionFourRef, tag: "four" },
+    ];
+
+    elements.forEach(({ ref, tag }) => {
+      const sectionElement = ref.current;
+
+      let observer = new IntersectionObserver(
+        function (entries) {
+          // isIntersecting is true when element and viewport are overlapping
+          // isIntersecting is false when element and viewport don't overlap
+          if (entries[0].isIntersecting === true) {
+            console.log("Element 0 has just become visible in screen");
+            sectionElement.classList.add(`section-${tag}-wrapper-animation`);
+          }
+        },
+        { threshold: [1] }
+      );
+
+      observer.observe(sectionElement.parentElement);
+    });
+  }, [sectionTwoRef, sectionThreeRef, sectionFourRef]);
 
   const handleViewMoreFaculties = () => {
     const { scrollLeft, scrollWidth, offsetLeft, offsetWidth } =
@@ -38,47 +64,11 @@ function Home() {
     navigate("/programs");
   };
 
-  const handleScroll = (e) => {
-    e.preventDefault();
-    const sectionTwoElement = sectionTwoRef.current;
-    const sectionThreeElement = sectionThreeRef.current;
-    const sectionFourElement = sectionFourRef.current;
-
-    const value1 = isInViewport(sectionTwoElement);
-    const value2 = isInViewport(sectionThreeElement);
-    const value3 = isInViewport(sectionFourElement);
-
-    if (value1) {
-      sectionTwoElement.classList.add("section-two-wrapper-animation");
-    }
-    if (value2) {
-      sectionThreeElement.classList.add("section-three-wrapper-animation");
-    }
-    if (value3) {
-      sectionFourElement.classList.add("section-four-wrapper-animation");
-    }
-
-    //Todo: Detect current scroll position and use it to add the new classes
-  };
-
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    console.log({ rect });
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
   return (
     <div
       className={`home-container container-scroll-enabled ${
         isHeaderModalVisible && "container-scroll-disabled"
       }`}
-      onScroll={handleScroll}
     >
       <Header />
       <section className="home-top-section">
